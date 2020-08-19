@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Materias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Materias
+    </ion-list-header>
+
+    <ion-item *ngFor="let materia of Materias" class="user-list">
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{materia.name}}
+        </h5>
+        <p>
+          <ion-icon name="call"></ion-icon> {{materia.credits}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{materia.hour}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{materia.day}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{materia.note}}
+        </p>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/edit-materia/', materia.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteMateria(materia.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
