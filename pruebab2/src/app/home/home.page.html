@@ -13,10 +13,11 @@
     </ion-list-header>
     <ion-item *ngFor="let materia of Materias">
       <ion-label>
+        <div class="subject">
         <h2>
-
-          <ion-icon name="clipboard-outline"></ion-icon> {{materia.name}}
+          <ion-icon name="clipboard-outline" color="dark"></ion-icon> {{materia.name}}
         </h2>
+        </div>
         <br/>
         <div class="padre">
 
@@ -34,7 +35,7 @@
   
             <div class="hijo2">                 
             <p style="font-size: 31px;">
-              <ion-icon name="checkbox-outline"></ion-icon> {{materia.note}}
+              <ion-icon name="checkbox-outline" color="success"></ion-icon> {{materia.note}}
             </p>
             </div>
 
@@ -42,10 +43,10 @@
 
         <div style="text-align: right">
           <button ion-button clear [routerLink]="['/edit-materia/', materia.$key]">
-            <ion-icon name="create-outline" style="zoom:2.0"></ion-icon>
+            <ion-icon name="create-outline" color="primary" style="zoom:2.0"></ion-icon>
           </button>
           <button ion-button clear (click)="deleteMateria(materia.$key)">
-            <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+            <ion-icon name="trash" color="danger" style="zoom:2.0"></ion-icon>
           </button>
         </div>
 
