@@ -7,38 +7,49 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list class="ios list-ios hydrated">
-    <ion-list-header class="ios hydrated">
+  <ion-list>
+    <ion-list-header>
       Materias
     </ion-list-header>
-
-    <ion-item *ngFor="let materia of Materias" class="user-list">
+    <ion-item *ngFor="let materia of Materias">
       <ion-label>
-        <h5>
-          <ion-icon name="person"></ion-icon> {{materia.name}}
-        </h5>
-        <p>
-          <ion-icon name="call"></ion-icon> {{materia.credits}}
-        </p>
-        <p>
-          <ion-icon name="call"></ion-icon> {{materia.hour}}
-        </p>
-        <p>
-          <ion-icon name="call"></ion-icon> {{materia.day}}
-        </p>
-        <p>
-          <ion-icon name="call"></ion-icon> {{materia.note}}
-        </p>
-      </ion-label>
+        <h2>
 
-      <div class="item-note" item-end>
-        <button ion-button clear [routerLink]="['/edit-materia/', materia.$key]">
-          <ion-icon name="create" style="zoom:2.0"></ion-icon>
-        </button>
-        <button ion-button clear (click)="deleteMateria(materia.$key)">
-          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
-        </button>
-      </div>
+          <ion-icon name="clipboard-outline"></ion-icon> {{materia.name}}
+        </h2>
+        <br/>
+        <div class="padre">
+
+            <div class="hijo1">
+              <p style="font-size: 15px;">
+                <ion-icon name="today-outline"></ion-icon> {{materia.day}}
+              </p>
+              <p style="font-size: 15px;">
+                <ion-icon name="time-outline"></ion-icon> {{materia.hour}}
+              </p>
+              <p style="font-size: 15px;">
+                <ion-icon name="trending-up-outline"></ion-icon> {{materia.credits}}
+              </p>
+            </div>
+  
+            <div class="hijo2">                 
+            <p style="font-size: 31px;">
+              <ion-icon name="checkbox-outline"></ion-icon> {{materia.note}}
+            </p>
+            </div>
+
+        </div>
+
+        <div style="text-align: right">
+          <button ion-button clear [routerLink]="['/edit-materia/', materia.$key]">
+            <ion-icon name="create-outline" style="zoom:2.0"></ion-icon>
+          </button>
+          <button ion-button clear (click)="deleteMateria(materia.$key)">
+            <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+          </button>
+        </div>
+
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -25,3 +25,15 @@
 #container a {
   text-decoration: none;
 }
+
+.padre {
+  display: flex;
+  padding-bottom: 10px;
+}
+.hijo1 {
+  text-align: left;
+}
+
+.hijo2{
+  padding-left: 80px;
+}
