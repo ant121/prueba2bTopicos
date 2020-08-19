@@ -1,13 +1,17 @@
 # prueba2bTopicos
-Tópicos Especiales
-Prueba 2
+Tópicos Especiales Prueba 2
+
 Integrantes:
 -Farinango Bryan
+
 -Quishpe Andrea
+
 -Tacuri Anthony
+
 -Vargas Erick
 
 IONIC - FIREBASE
+
 Indicaciones: Aplicación que permita llevar el registro de sus calificaciones semestrales. Es decir, permita insertar, eliminar o modificar las mismas. Además, permita insertar materias, editarlas o eliminarlas.
 
 Interfaz:
